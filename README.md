@@ -1,1 +1,1 @@
-# Web-Hosting-Hostinger
+# Web-Hosting
