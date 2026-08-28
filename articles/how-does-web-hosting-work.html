@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification"
+          content="ziaLfG_QxmTvbOIoHAM72FYDbZgVV5pM5xMfDfrNBmA">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZDJCJWX5F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+
+        gtag('js', new Date());
+        gtag('config', 'G-3ZDJCJWX5F');
+    </script>
+
+    <title>How Does Web Hosting Work? A Step-by-Step Guide</title>
+
+    <meta name="description"
+          content="Learn how web hosting works step by step, from entering a domain name to receiving website files from a server, including DNS, browsers, servers, databases, and hosting types.">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <link rel="canonical"
+          href="https://nasirportfolio.github.io/Web-Hosting/articles/how-does-web-hosting-work.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title"
+          content="How Does Web Hosting Work? A Step-by-Step Guide">
+
+    <meta property="og:description"
+          content="A practical beginner-friendly guide explaining how web hosting works, including domains, DNS, browsers, servers, databases, and website files.">
+
+    <meta property="og:type"
+          content="article">
+
+    <meta property="og:url"
+          content="https://nasirportfolio.github.io/Web-Hosting/articles/how-does-web-hosting-work.html">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.75;
+            color: #222;
+            background: #f7f9fc;
+        }
+
+        header {
+            background: #17365d;
+            color: #ffffff;
+            padding: 55px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            max-width: 900px;
+            margin: 0 auto 18px;
+            font-size: 2.5rem;
+            line-height: 1.25;
+        }
+
+        header p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 1.08rem;
+        }
+
+        nav {
+            background: #ffffff;
+            padding: 15px 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav a {
+            margin: 0 12px;
+            color: #17365d;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        article {
+            background: #ffffff;
+            padding: 40px;
+            border: 1px solid #e1e5ea;
+            border-radius: 8px;
+        }
+
+        article h2 {
+            color: #17365d;
+            margin-top: 42px;
+            line-height: 1.3;
+        }
+
+        article h3 {
+            color: #17365d;
+            margin-top: 30px;
+        }
+
+        article p {
+            margin: 16px 0;
+        }
+
+        article ul,
+        article ol {
+            padding-left: 25px;
+        }
+
+        article li {
+            margin-bottom: 10px;
+        }
+
+        .quick-answer {
+            background: #f1f5f9;
+            border-left: 5px solid #17365d;
+            padding: 22px;
+            margin: 25px 0 35px;
+        }
+
+        .quick-answer strong {
+            color: #17365d;
+        }
+
+        .process-box {
+            background: #fafafa;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 22px;
+            margin: 25px 0;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 14px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #f1f5f9;
+            color: #17365d;
+        }
+
+        .internal-link {
+            background: #f1f5f9;
+            border: 1px solid #d8e0e8;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .recommended {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-left: 5px solid #17365d;
+            border-radius: 6px;
+            padding: 25px;
+            margin: 40px 0;
+        }
+
+        .affiliate-placeholder {
+            background: #f7f7f7;
+            border: 1px dashed #999;
+            border-radius: 5px;
+            padding: 16px;
+        }
+
+        .faq {
+            border-top: 1px solid #ddd;
+            padding: 20px 0;
+        }
+
+        .faq h3 {
+            margin-top: 0;
+        }
+
+        footer {
+            background: #17365d;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #ffffff;
+            margin: 0 8px;
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            article {
+                padding: 24px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>How Does Web Hosting Work? A Step-by-Step Guide</h1>
+
+        <p>
+            Understand what happens behind the scenes when someone visits
+            a website, from the domain name and DNS to the web server and browser.
+        </p>
+
+    </header>
+
+
+    <nav aria-label="Main navigation">
+
+        <a href="../index.html">Home</a>
+
+        <a href="index.html">Articles</a>
+
+        <a href="../about.html">About</a>
+
+        <a href="../contact.html">Contact</a>
+
+    </nav>
+
+
+    <main>
+
+        <article>
+
+            <div class="quick-answer">
+
+                <strong>Quick answer:</strong>
+
+                <p>
+                    Web hosting works by storing website resources on servers
+                    connected to the internet and delivering those resources
+                    when a visitor requests a webpage. A typical process
+                    involves a browser, domain name, DNS, an internet connection,
+                    a web server, and the website's files or database.
+                </p>
+
+            </div>
+
+
+            <p>
+                When you visit a website, the page may appear almost instantly.
+                Behind that simple experience, however, several systems work
+                together to locate the website and deliver the information
+                required by your browser.
+            </p>
+
+            <p>
+                Understanding this process helps website owners make better
+                decisions about hosting, domains, performance, security, and
+                website management.
+            </p>
+
+
+            <h2>How Does Web Hosting Work?</h2>
+
+            <p>
+                Web hosting works by providing server resources where a
+                website's files, applications, and sometimes databases can
+                be stored. When a visitor requests a webpage, the hosting
+                environment processes the request and returns the required
+                resources to the visitor's browser.
+            </p>
+
+            <p>
+                The exact process depends on the type of website. A simple
+                static webpage may only require files such as HTML, CSS,
+                JavaScript, and images. A dynamic website may also communicate
+                with application software and databases before producing the
+                requested response.
+            </p>
+
+
+            <h2>The Web Hosting Process Step by Step</h2>
+
+            <div class="process-box">
+
+                <ol>
+
+                    <li>
+                        A visitor enters a website address or clicks a link.
+                    </li>
+
+                    <li>
+                        The browser needs to determine where the website is located.
+                    </li>
+
+                    <li>
+                        DNS helps associate the domain name with the appropriate
+                        internet destination.
+                    </li>
+
+                    <li>
+                        The browser sends a request for the website resources.
+                    </li>
+
+                    <li>
+                        The hosting server receives and processes the request.
+                    </li>
+
+                    <li>
+                        The server retrieves or generates the requested resources.
+                    </li>
+
+                    <li>
+                        The server sends a response back to the browser.
+                    </li>
+
+                    <li>
+                        The browser processes the response and displays the webpage.
+                    </li>
+
+                </ol>
+
+            </div>
+
+
+            <h2>Step 1: A Visitor Requests a Website</h2>
+
+            <p>
+                The process begins when someone enters a domain name into a
+                browser or clicks a link.
+            </p>
+
+            <p>
+                For example, a visitor might enter:
+            </p>
+
+            <div class="process-box">
+
+                <strong>example.com</strong>
+
+            </div>
+
+            <p>
+                The browser now needs to determine where it should send the
+                request for that website.
+            </p>
+
+
+            <h2>Step 2: DNS Helps Find the Website</h2>
+
+            <p>
+                DNS stands for <strong>Domain Name System</strong>. It helps
+                translate human-readable domain names into information that
+                computers can use to locate internet services.
+            </p>
+
+            <p>
+                People generally prefer memorable names, while network
+                communication relies on technical addressing information.
+                DNS helps connect these two parts of the process.
+            </p>
+
+            <p>
+                DNS can involve different types of records, including records
+                used for website addresses, mail services, and other internet
+                services.
+            </p>
+
+
+            <h2>Step 3: The Browser Sends a Request</h2>
+
+            <p>
+                After the browser has the information needed to reach the
+                website, it can send a request to the appropriate server.
+            </p>
+
+            <p>
+                The request may ask for a particular webpage or resource.
+                A modern webpage can require multiple resources, such as
+                HTML documents, stylesheets, scripts, fonts, and images.
+            </p>
+
+
+            <h2>Step 4: The Web Server Receives the Request</h2>
+
+            <p>
+                A web server is software running on a server environment that
+                can receive and respond to web requests.
+            </p>
+
+            <p>
+                When the request arrives, the server determines what response
+                is required. For a simple static website, it may retrieve a
+                file directly. For a dynamic website, additional application
+                processing may take place.
+            </p>
+
+
+            <h2>Step 5: The Server Finds or Generates the Content</h2>
+
+            <p>
+                The way content is produced depends on the website.
+            </p>
+
+            <h3>Static websites</h3>
+
+            <p>
+                A static website can deliver pre-created files such as HTML,
+                CSS, JavaScript, and images. The server can retrieve those
+                files and return them to the visitor.
+            </p>
+
+            <h3>Dynamic websites</h3>
+
+            <p>
+                A dynamic website may use application code and databases.
+                The server environment may process the request, retrieve
+                information from a database, and generate or assemble part
+                of the response before sending it to the browser.
+            </p>
+
+
+            <h2>Step 6: The Server Sends a Response</h2>
+
+            <p>
+                Once the server has processed the request, it sends a response
+                back to the browser.
+            </p>
+
+            <p>
+                The response can include the requested webpage and other
+                resources required to display it.
+            </p>
+
+            <p>
+                If the website needs additional files, the browser may make
+                further requests for those resources.
+            </p>
+
+
+            <h2>Step 7: The Browser Displays the Website</h2>
+
+            <p>
+                The browser receives the response and processes the resources.
+                It interprets HTML to understand the page structure, CSS to
+                determine presentation, and JavaScript when scripts are required.
+            </p>
+
+            <p>
+                The result is the webpage that the visitor sees on the screen.
+            </p>
+
+
+            <h2>Where Does Web Hosting Fit Into This Process?</h2>
+
+            <p>
+                Web hosting provides the infrastructure that makes the website
+                resources available to visitors. Depending on the hosting
+                service, this can include storage, computing resources,
+                networking, databases, security features, management tools,
+                backups, and technical support.
+            </p>
+
+            <p>
+                Hosting does not replace the domain name. Instead, the domain
+                and hosting work together so visitors can reach the website.
+            </p>
+
+
+            <div class="internal-link">
+
+                <strong>New to web hosting?</strong>
+
+                <p>
+                    Before continuing, learn the basic meaning of web hosting
+                    and how it differs from a domain name.
+                </p>
+
+                <a href="what-is-web-hosting.html">
+                    What Is Web Hosting? A Complete Beginner's Guide
+                </a>
+
+            </div>
+
+
+            <h2>What Happens When a Website Uses a Database?</h2>
+
+            <p>
+                Many modern websites are more than collections of static files.
+                They may use databases to store information such as products,
+                customer accounts, articles, orders, or other records.
+            </p>
+
+            <p>
+                When a visitor requests information, application software may
+                communicate with the database, process the information, and
+                return an appropriate response.
+            </p>
+
+            <p>
+                This is one reason hosting requirements can vary significantly
+                between different websites.
+            </p>
+
+
+            <h2>How Hosting Type Affects the Process</h2>
+
+            <p>
+                The fundamental request-and-response process remains similar,
+                but the infrastructure supporting it can differ depending on
+                the hosting model.
+            </p>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Hosting Type</th>
+
+                            <th>General Characteristics</th>
+
+                            <th>Typical Use</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td><strong>Shared Hosting</strong></td>
+
+                            <td>
+                                Multiple websites share a hosting environment
+                                and its available resources.
+                            </td>
+
+                            <td>
+                                Smaller websites and beginners.
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td><strong>VPS Hosting</strong></td>
+
+                            <td>
+                                Provides a more isolated virtual server
+                                environment and greater control.
+                            </td>
+
+                            <td>
+                                Growing websites and applications.
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td><strong>Cloud Hosting</strong></td>
+
+                            <td>
+                                Uses connected computing infrastructure and
+                                can provide flexibility and scalability.
+                            </td>
+
+                            <td>
+                                Websites and applications with changing
+                                resource requirements.
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td><strong>Dedicated Hosting</strong></td>
+
+                            <td>
+                                An entire physical server is allocated to
+                                one customer.
+                            </td>
+
+                            <td>
+                                High-resource or specialized workloads.
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <h2>What Can Affect Website Hosting Performance?</h2>
+
+            <p>
+                Hosting is only one part of website performance, but the
+                hosting environment can influence how efficiently a website
+                handles requests.
+            </p>
+
+            <p>
+                Factors that may matter include:
+            </p>
+
+            <ul>
+
+                <li>Available server resources</li>
+
+                <li>Server configuration</li>
+
+                <li>Website code and application efficiency</li>
+
+                <li>Database performance</li>
+
+                <li>Caching</li>
+
+                <li>Content delivery networks</li>
+
+                <li>Image and media optimization</li>
+
+                <li>Traffic levels</li>
+
+                <li>Network conditions</li>
+
+                <li>Location of users and infrastructure</li>
+
+            </ul>
+
+
+            <h2>What Happens If a Hosting Server Goes Down?</h2>
+
+            <p>
+                If the infrastructure serving a website becomes unavailable,
+                visitors may be unable to access the website until the problem
+                is resolved or another available system can serve the content.
+            </p>
+
+            <p>
+                Hosting providers use different architectures and reliability
+                measures. Depending on the service, these may include
+                monitoring, redundancy, backups, failover systems, or other
+                infrastructure designed to reduce downtime.
+            </p>
+
+            <p>
+                Website owners should still maintain appropriate backups rather
+                than assuming that hosting alone eliminates the need for
+                recovery planning.
+            </p>
+
+
+            <h2>How to Understand Web Hosting More Easily</h2>
+
+            <p>
+                If the technical details seem complicated, remember the basic
+                relationship:
+            </p>
+
+            <div class="process-box">
+
+                <p>
+                    <strong>Domain</strong> → helps people reach the website
+                </p>
+
+                <p>
+                    <strong>DNS</strong> → helps direct the domain toward the
+                    appropriate internet destination
+                </p>
+
+                <p>
+                    <strong>Hosting server</strong> → provides the environment
+                    where website resources are stored or processed
+                </p>
+
+                <p>
+                    <strong>Browser</strong> → requests and displays the website
+                </p>
+
+            </div>
+
+
+            <h2>Common Questions About How Web Hosting Works</h2>
+
+
+            <div class="faq">
+
+                <h3>Does web hosting store my website?</h3>
+
+                <p>
+                    Yes. Hosting services can provide storage and server
+                    resources for website files and, depending on the website,
+                    databases and application data.
+                </p>
+
+            </div>
+
+
+            <div class="faq">
+
+                <h3>Does a domain name contain my website?</h3>
+
+                <p>
+                    No. A domain name is primarily the human-readable address
+                    used to reach a website. The website's resources are stored
+                    or processed in a hosting environment or another form of
+                    web infrastructure.
+                </p>
+
+            </div>
+
+
+            <div class="faq">
+
+                <h3>Does every website need a database?</h3>
+
+                <p>
+                    No. Many simple static websites can work without a
+                    database. More complex websites and applications may use
+                    databases to store and retrieve information.
+                </p>
+
+            </div>
+
+
+            <div class="faq">
+
+                <h3>Is web hosting the same as a web server?</h3>
+
+                <p>
+                    They are related but not identical. A web server can refer
+                    to the software that handles web requests, while web
+                    hosting is a service or environment that provides the
+                    infrastructure needed to host and deliver websites.
+                </p>
+
+            </div>
+
+
+            <div class="faq">
+
+                <h3>Can one hosting account contain multiple websites?</h3>
+
+                <p>
+                    Some hosting plans allow multiple websites, while others
+                    may be designed for a single website. The exact limit and
+                    configuration depend on the hosting provider and plan.
+                </p>
+
+            </div>
+
+
+            <section class="recommended">
+
+                <h2>Recommended Hosting</h2>
+
+                <p>
+                    When choosing hosting, compare server resources, security
+                    features, support, performance options, scalability, and
+                    pricing with the actual requirements of your website.
+                </p>
+
+                <div class="affiliate-placeholder">
+
+                    <strong>[Affiliate recommendation — link to be added]</strong>
+
+                    <p>
+                        A relevant hosting recommendation may be added here
+                        after an appropriate affiliate program is approved.
+                    </p>
+
+                </div>
+
+                <!--
+                HOSTINGER AFFILIATE PLACEHOLDER
+
+                Hostinger affiliate link to be added only after approval.
+
+                Do not replace this placeholder with an affiliate link
+                before the affiliate relationship is approved.
+
+                If another suitable hosting affiliate program is approved
+                later, this section can be updated accordingly.
+                -->
+
+            </section>
+
+
+            <h2>Conclusion</h2>
+
+            <p>
+                Web hosting works by providing the infrastructure needed to
+                store, process, and deliver website resources to visitors.
+                When someone requests a webpage, the browser, DNS, internet
+                connection, hosting infrastructure, and web server can all
+                play a role in delivering the requested content.
+            </p>
+
+            <p>
+                Once you understand this basic process, topics such as domains,
+                DNS, hosting types, website speed, security, and server
+                resources become much easier to understand.
+            </p>
+
+        </article>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            &copy; 2026 Web Hosting Guide. All rights reserved.
+        </p>
+
+        <p>
+
+            <a href="../index.html">Home</a>
+
+            |
+
+            <a href="index.html">Articles</a>
+
+            |
+
+            <a href="../about.html">About</a>
+
+            |
+
+            <a href="../contact.html">Contact</a>
+
+            |
+
+            <a href="../privacy-policy.html">Privacy Policy</a>
+
+        </p>
+
+    </footer>
+
+</body>
+</html>
